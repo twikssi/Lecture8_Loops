@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ForOddChecker {
-    public static Logger logger = LoggerFactory.getLogger(ForOddChecker.class);
+    public static final Logger logger = LoggerFactory.getLogger(ForOddChecker.class);
 
     private ForOddChecker() {
     }
