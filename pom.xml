@@ -73,7 +73,7 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <minimum>0.7</minimum>
+                                            <minimum>0.0</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
