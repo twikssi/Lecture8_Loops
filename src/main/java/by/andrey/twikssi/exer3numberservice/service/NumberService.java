@@ -6,12 +6,15 @@ public class NumberService {
     }
 
     public static int rangeSum(int start, int finish){
+        int sum = 0;
         if(finish > start){
-            return sum(start,finish);
+            sum = sum(start,finish);
+            return sum;
         } else if (finish < start){
-            return sum(finish, start);
+            sum = sum(finish, start);
+            return sum;
         } else {
-            return 0;
+            return sum;
         }
     }
 
@@ -35,12 +38,15 @@ public class NumberService {
 
 
     public static int rangeEvenCount(int start, int finish){
+        int sum = 0;
         if(finish > start){
-            return sumEven(start,finish);
+            sum = sumEven(start,finish);
+            return sum;
         } else if (finish < start){
-            return sumEven(finish, start);
+            sum = sumEven(finish, start);
+            return sum;
         } else {
-            return 0;
+            return sum;
         }
     }
 
