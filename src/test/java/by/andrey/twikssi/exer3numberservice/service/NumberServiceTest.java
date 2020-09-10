@@ -53,4 +53,52 @@ public class NumberServiceTest {
 
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void sumEven() {
+        int expected = 2+4+6+8+10;
+        int actual = NumberService.sumEven(1,10);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void sumEvenReturnNumber() {
+        int expected = 2;
+        int actual = NumberService.sumEven(2,2);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void sumEvenReturnZero() {
+        int expected = 0;
+        int actual = NumberService.sumEven(1,1);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void rangeEvenCountReturnZero() {
+        int expected = 0;
+        int actual = NumberService.rangeEvenCount(1,1);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void rangeEvenCountReturnNumberReverse() {
+        int expected = 2+4+6+8+10;
+        int actual = NumberService.rangeEvenCount(10,1);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void rangeEvenCountReturnNumber() {
+        int expected = 4+6+8+10+12+14+16+18;
+        int actual = NumberService.rangeEvenCount(4,18);
+
+        assertEquals(expected,actual);
+    }
 }
