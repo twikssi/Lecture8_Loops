@@ -21,6 +21,13 @@ public class Car {
         return false;
     }
 
+    public boolean isStopped(){
+           if (currentSpeed == 0){
+               return true;
+           }
+           return false;
+    }
+
     public String getModel() {
         return model;
     }

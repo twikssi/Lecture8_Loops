@@ -65,4 +65,21 @@ public class CarTest {
 
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void isStoppedReturnTrue() {
+        boolean expected = true;
+        boolean actual = car.isStopped();
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void isStoppedReturnFalse() {
+        car.setCurrentSpeed(45);
+        boolean expected = false;
+        boolean actual = car.isStopped();
+
+        assertEquals(expected,actual);
+    }
 }
