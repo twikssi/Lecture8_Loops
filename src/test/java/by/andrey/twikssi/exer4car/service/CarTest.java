@@ -82,4 +82,22 @@ public class CarTest {
 
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void canAccelerateReturnTrue() {
+        car.setCurrentSpeed(45);
+        boolean expected = true;
+        boolean actual = car.canAccelerate();
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void canAccelerateReturnFalse() {
+        car.setCurrentSpeed(180);
+        boolean expected = false;
+        boolean actual = car.canAccelerate();
+
+        assertEquals(expected,actual);
+    }
 }

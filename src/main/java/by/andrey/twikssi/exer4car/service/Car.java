@@ -28,6 +28,13 @@ public class Car {
            return false;
     }
 
+    public boolean canAccelerate() {
+         if (this.currentSpeed < MAX_SPEED){
+             return true;
+         }
+         return false;
+    }
+
     public String getModel() {
         return model;
     }
