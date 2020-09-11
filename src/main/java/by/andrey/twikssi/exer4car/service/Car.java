@@ -14,7 +14,12 @@ public class Car {
         this.MAX_SPEED = MAX_SPEED;
     }
 
-    
+    public boolean isDriving() {
+        if (currentSpeed > 0){
+           return true;
+        }
+        return false;
+    }
 
     public String getModel() {
         return model;
