@@ -14,6 +14,15 @@ public class Car {
         this.MAX_SPEED = MAX_SPEED;
     }
 
+    public void accelerate(int targetSpeed){
+       for (int i = 0; i < targetSpeed; i++){
+           if(this.currentSpeed == MAX_SPEED){
+               break;
+           }
+           this.currentSpeed += 1;
+       }
+    }
+
     public boolean isDriving() {
         if (currentSpeed > 0){
            return true;
