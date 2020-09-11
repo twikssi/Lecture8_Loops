@@ -15,12 +15,23 @@ public class Car {
     }
 
     public void accelerate(int targetSpeed){
-       for (int i = 0; i < targetSpeed; i++){
-           if(this.currentSpeed == MAX_SPEED){
-               break;
-           }
+       if (targetSpeed - this.currentSpeed <= 0 || targetSpeed > MAX_SPEED){
+           return;
+       }
+       int max = targetSpeed - this.currentSpeed;
+       for (int i = 0; i < max; i++){
            this.currentSpeed += 1;
        }
+    }
+
+    public void decelerate(int targetSpeed){
+         if (this.currentSpeed - targetSpeed <= 0 || targetSpeed == 0){
+             return;
+         }
+        int min = this.currentSpeed - targetSpeed;
+        for (int i = 0; i < min; i++){
+              this.currentSpeed -= 1;
+        }
     }
 
     public boolean isDriving() {

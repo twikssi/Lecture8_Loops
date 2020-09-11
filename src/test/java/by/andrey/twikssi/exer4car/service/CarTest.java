@@ -104,7 +104,7 @@ public class CarTest {
     @Test
     public void accelerateSetSpeedMoreThanMax() {
         car.accelerate(180);
-        int expected = 160;
+        int expected = 0;
         int actual = car.getCurrentSpeed();
 
         assertEquals(expected,actual);
@@ -122,8 +122,47 @@ public class CarTest {
     @Test
     public void accelerateSetSpeed() {
         car.accelerate(100);
-        car.accelerate(40);
+        car.accelerate(140);
         int expected = 140;
+        int actual = car.getCurrentSpeed();
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void accelerateSetMaxSpeedReturnNumber() {
+        car.accelerate(240);
+        int expected = 0;
+        int actual = car.getCurrentSpeed();
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void decelerateReturnZero() {
+        car.decelerate(40);
+        int expected = 0;
+        int actual = car.getCurrentSpeed();
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void decelerate() {
+        car.setCurrentSpeed(100);
+        car.decelerate(40);
+        int expected = 40;
+        int actual = car.getCurrentSpeed();
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void decelerateSetTwoValuesSpeed() {
+        car.setCurrentSpeed(100);
+        car.decelerate(40);
+        car.decelerate(30);
+        int expected = 30;
         int actual = car.getCurrentSpeed();
 
         assertEquals(expected,actual);
